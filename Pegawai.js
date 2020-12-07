@@ -7,7 +7,7 @@ class Pegawai extends Component {
     constructor(){
         super();
         this.state = {
-            pegawai: [], //array pegawai untuk menampun data pegawai
+            pegawai: [], //array pegawai untuk menampung data pegawai
             nip: "",
             nama: "",
             alamat: "",
@@ -22,7 +22,7 @@ class Pegawai extends Component {
 
     Add = () => {
         //mengosonglan isi variabel nip, nama dan alamat
-        //set action mnjd insert
+        //set action menjadi insert
         this.setState({
             nip: "",
             nama: "",
@@ -67,7 +67,7 @@ class Pegawai extends Component {
             //mengakses api untuk mengambil data pegawai berdasarkan keyword
             axios.post(url, form)
             .then(response => {
-                //mengisikan data dari rrespon api ke array pegawai
+                //mengisikan data dari respon api ke array pegawai
                 this.setState({pegawai: response.data.pegawai});
             })
             .catch(error => {
